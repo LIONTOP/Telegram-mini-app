@@ -1,0 +1,20 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Telegram Mini App</title>
+  <meta charset="UTF-8">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <h1>Salom, Telegram foydalanuvchisi!</h1>
+  <p id="user">Yuklanmoqda...</p>
+  <script>
+    const tg = window.Telegram.WebApp;
+    tg.expand();
+    document.getElementById("user").innerText = "Ism: " + tg.initDataUnsafe.user?.first_name;
+  </script>
+</body>
+</html>
